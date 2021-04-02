@@ -7,6 +7,11 @@ TASK 1 🚀
 // The customer would like to see the topping options, console log out each of the toppings one by one in the array above 
 */
 
+toppings.forEach(function(item){
+console.log(item)
+
+
+})
 
 /*
 TASK 2 🚀
@@ -15,13 +20,23 @@ for example you no longer have any onions and need to remove it from the list of
 Use .forEach() - hint - you will need to include the index in the callback
  */
 
+function removeItem(array, item){
+let newArray=[]
+    array.forEach(function(index){
+    if(index != item){
+        newArray.push(index);
+    }
+})
+return newArray
+}
 
+console.log(removeItem(toppings, 'Bacon'));
 
 /*
 TASK 3 🚀
 // Sort the topping alphabetically and return them in a new array 
 */
-
+//hint use .map//
 
 
 
@@ -43,7 +58,11 @@ TASK 4 🚀
 // The travel agent would like to send a couple on their honeymoon to a location with a beach and a temperature above 90 degrees. return their options in a new array 
 */
 
+let newVacations = vacations.filter(function(item){
+    return item.temperature > 90  && item.beach === true
+})
 
+console.log(newVacations)
 
 /*
 TASK 5 🚀
